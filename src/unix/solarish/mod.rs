@@ -2176,6 +2176,11 @@ extern "C" {
     pub fn endpwent();
     pub fn getpwent() -> *mut passwd;
     pub fn fdatasync(fd: ::c_int) -> ::c_int;
+    pub fn posix_fallocate(
+        fd: ::c_int,
+        offset: ::off_t,
+        len: ::off_t,
+    ) -> ::c_int;
     pub fn nl_langinfo_l(item: ::nl_item, locale: ::locale_t)
         -> *mut ::c_char;
     pub fn duplocale(base: ::locale_t) -> ::locale_t;
